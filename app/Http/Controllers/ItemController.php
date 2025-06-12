@@ -1,7 +1,5 @@
 <?php
 
-// app/Http/Controllers/ItemController.php
-
 namespace App\Http\Controllers;
 
 use App\Models\Item;
@@ -50,7 +48,7 @@ class ItemController extends Controller
         ]);
 
         $data = $request->only(['title', 'description', 'status']);
-        $data['user_id'] = Auth::id(); // ✅ required to avoid SQL error
+        $data['user_id'] = Auth::id();
 
         Item::create($data);
 

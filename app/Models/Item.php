@@ -31,8 +31,6 @@ class Item extends Model
         });
     }
 
-
-    // Optional: method to create a new item for a user
     public static function createForUser($userId, $data)
     {
         return self::create([
