@@ -13,10 +13,14 @@ class Items extends Component
 
     public $active = false;
     public $q = '';
+    public $sortBy = 'id';
+    public $sortAsc = true;
 
     protected $queryString = [
-        'active',
-        'q'
+        'active' => ['except' => false],
+        'q' => ['except' => ''],
+        'sortBy' => ['except' => 'id'],
+        'sortAsc' => ['except' => true],
     ];
 
     public function updatingQ()
@@ -48,6 +52,9 @@ class Items extends Component
             $query->active();
         }
 
+        // Apply ordering
+        $query->orderBy($this->sortBy, $this->sortAsc ? 'asc' : 'desc');
+
         // For debugging the SQL query
         $rawSql = $query->toSql();
 
@@ -57,5 +64,13 @@ class Items extends Component
             'items' => $items,
             'query' => $rawSql
         ]);
+    }
+
+    public function setSort($field)
+    {
+        if ($field == $this->sortBy) {
+            $this->sortAsc = !$this->sortAsc;
+        }
+        $this->sortBy = $field;
     }
 }
