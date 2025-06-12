@@ -73,4 +73,9 @@ class Items extends Component
         }
         $this->sortBy = $field;
     }
+
+    public function confirmItemDeletion(Item $item)
+    {
+        $item -> delete();
+    }
 }

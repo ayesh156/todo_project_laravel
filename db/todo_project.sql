@@ -72,12 +72,8 @@ CREATE TABLE IF NOT EXISTS `items` (
 
 -- Dumping data for table todo_project.items: ~25 rows (approximately)
 INSERT INTO `items` (`id`, `user_id`, `title`, `description`, `status`, `created_at`, `updated_at`) VALUES
-	(1, 1, 'suscipit', 'Array', 0, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
-	(2, 1, 'quo', 'Array', 0, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
-	(3, 1, 'expedita', 'Array', 0, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
-	(4, 1, 'voluptas', 'Array', 1, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
-	(5, 1, 'ut', 'Array', 1, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
-	(6, 1, 'assumenda', 'Array', 1, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
+	(1, 1, 'suscipit21', 'Array341', 0, '2025-06-12 04:33:49', '2025-06-12 07:03:02'),
+	(2, 1, 'quo2', 'Array2', 0, '2025-06-12 04:33:49', '2025-06-12 07:00:04'),
 	(7, 1, 'est', 'Array', 0, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
 	(8, 1, 'explicabo', 'Array', 1, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
 	(9, 1, 'repudiandae', 'Array', 0, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
@@ -96,7 +92,13 @@ INSERT INTO `items` (`id`, `user_id`, `title`, `description`, `status`, `created
 	(22, 1, 'tempore', 'Array', 0, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
 	(23, 1, 'aut', 'Array', 0, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
 	(24, 1, 'aut', 'Array', 0, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
-	(25, 1, 'maiores', 'Array', 0, '2025-06-12 04:33:49', '2025-06-12 04:33:49');
+	(25, 1, 'maiores', 'Array', 0, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
+	(26, 1, 'sdf', 'sdf', 1, '2025-06-12 06:37:10', '2025-06-12 06:37:10'),
+	(27, 1, 'swa', 'wer', 1, '2025-06-12 06:49:48', '2025-06-12 06:49:48'),
+	(28, 1, 'sdf', 'wer', 1, '2025-06-12 06:51:31', '2025-06-12 06:51:31'),
+	(29, 1, 'sdf', 'wer', 1, '2025-06-12 06:51:38', '2025-06-12 06:51:38'),
+	(30, 1, 'sdf', 'wer', 1, '2025-06-12 06:52:04', '2025-06-12 06:52:04'),
+	(31, 1, 'sdffds', 'werwe', 1, '2025-06-12 06:52:10', '2025-06-12 06:52:10');
 
 -- Dumping structure for table todo_project.jobs
 CREATE TABLE IF NOT EXISTS `jobs` (
@@ -191,7 +193,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 
 -- Dumping data for table todo_project.sessions: ~1 rows (approximately)
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-	('4Dl6pxf1HWWd5MuZoiVMLLrgZM3001sP4K39qgOI', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVHVpWERTNFRUNjVYWFRhQ0pPRVZDdzExbGJMUldrY0lVcUlxTDZPMCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9pdGVtcz9hY3RpdmU9ZmFsc2UmcGFnZT0xJnNvcnRBc2M9ZmFsc2UiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEyJDNCRzZoTllsbnNyVFF6alV4RTJ5dy51SmpGNWpJSG1QZVJiTEtkSUVMUUQvdm81Q1FHOU9xIjt9', 1749725350);
+	('4Dl6pxf1HWWd5MuZoiVMLLrgZM3001sP4K39qgOI', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVHVpWERTNFRUNjVYWFRhQ0pPRVZDdzExbGJMUldrY0lVcUlxTDZPMCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9pdGVtcyI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTIkM0JHNmhOWWxuc3JUUXpqVXhFMnl3LnVKakY1aklIbVBlUmJMS2RJRUxRRC92bzVDUUc5T3EiO30=', 1749731837);
 
 -- Dumping structure for table todo_project.users
 CREATE TABLE IF NOT EXISTS `users` (

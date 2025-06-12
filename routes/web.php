@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ItemController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -25,4 +26,8 @@ Route::middleware([
     Route::get('/items', function () {
         return view('items');
     })->name('items');
+
+    Route::post('/items', [ItemController::class, 'store'])->name('items.store');
+
+    Route::put('/items/{item}', [ItemController::class, 'update'])->name('items.update');
 });

@@ -9,7 +9,7 @@ class Item extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'description', 'status'];
+    protected $fillable = ['user_id', 'title', 'description', 'status'];
 
     public function user()
     {
@@ -29,5 +29,17 @@ class Item extends Model
             $q->whereRaw('LOWER(title) LIKE ?', ['%' . strtolower($term) . '%'])
               ->orWhereRaw('LOWER(description) LIKE ?', ['%' . strtolower($term) . '%']);
         });
+    }
+
+
+    // Optional: method to create a new item for a user
+    public static function createForUser($userId, $data)
+    {
+        return self::create([
+            'user_id' => 27,
+            'title' => $data['title'],
+            'description' => $data['description'],
+            'status' => $data['status'] ?? 0,
+        ]);
     }
 }
