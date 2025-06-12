@@ -9,7 +9,7 @@ class Item extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'price', 'status'];
+    protected $fillable = ['title', 'description', 'status'];
 
     public function user()
     {
@@ -26,8 +26,8 @@ class Item extends Model
     public function scopeSearch($query, $term)
     {
         return $query->where(function ($q) use ($term) {
-            $q->whereRaw('LOWER(name) LIKE ?', ['%' . strtolower($term) . '%'])
-              ->orWhereRaw('CAST(price AS CHAR) LIKE ?', ['%' . $term . '%']);
+            $q->whereRaw('LOWER(title) LIKE ?', ['%' . strtolower($term) . '%'])
+              ->orWhereRaw('LOWER(description) LIKE ?', ['%' . strtolower($term) . '%']);
         });
     }
 }

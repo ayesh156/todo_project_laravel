@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id')->index();
-            $table->string('name');
-            $table->float('price', 8, 2);
+            $table->string('title');
+            $table->text('description');
             $table->boolean('status');
             $table->timestamps();
         });

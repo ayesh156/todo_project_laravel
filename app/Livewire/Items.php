@@ -14,6 +14,11 @@ class Items extends Component
     public $active = false;
     public $q = '';
 
+    protected $queryString = [
+        'active',
+        'q'
+    ];
+
     public function updatingQ()
     {
         $this->resetPage();

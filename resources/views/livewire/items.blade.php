@@ -20,10 +20,10 @@
                         <div class="flex items-center">ID</div>
                     </th>
                     <th class="px-4 py-2">
-                        <div class="flex items-center">Name</div>
+                        <div class="flex items-center">Title</div>
                     </th>
                     <th class="px-4 py-2">
-                        <div class="flex items-center">Price</div>
+                        <div class="flex items-center">Description</div>
                     </th>
                     <th class="px-4 py-2">
                         Status
@@ -37,8 +37,8 @@
                 @foreach ($items as $item)
                     <tr>
                         <td class="border px-4 py-2">{{ $item->id }}</td>
-                        <td class="border px-4 py-2">{{ $item->name }}</td>
-                        <td class="border px-4 py-2">{{ number_format($item->price, 2) }}</td>
+                        <td class="border px-4 py-2">{{ $item->title }}</td>
+                        <td class="border px-4 py-2">{{ $item->description }}</td>
                         <td class="border px-4 py-2">{{ $item->status ? 'Active' : 'Not-Active' }}</td>
                         <td class="border px-4 py-2">Edit Delete</td>
                     </tr>

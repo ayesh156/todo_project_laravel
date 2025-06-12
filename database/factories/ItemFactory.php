@@ -21,8 +21,8 @@ class ItemFactory extends Factory
         return [
             //
             'user_id' => User::factory(),
-            'name' => $this->faker->word,
-            'price' => $this->faker->randomNumber(2),
+            'title' => $this->faker->word,
+            'description' => $this->faker->word,
             'status' => $this->faker->boolean()
         ];
     }
