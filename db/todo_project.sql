@@ -29,8 +29,8 @@ CREATE TABLE IF NOT EXISTS `cache` (
 
 -- Dumping data for table todo_project.cache: ~2 rows (approximately)
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-	('laravel_cache_81b329ed6678cce7b87a8efa97b38767', 'i:1;', 1749719256),
-	('laravel_cache_81b329ed6678cce7b87a8efa97b38767:timer', 'i:1749719256;', 1749719256);
+	('laravel_cache_81b329ed6678cce7b87a8efa97b38767', 'i:1;', 1749799708),
+	('laravel_cache_81b329ed6678cce7b87a8efa97b38767:timer', 'i:1749799708;', 1749799708);
 
 -- Dumping structure for table todo_project.cache_locks
 CREATE TABLE IF NOT EXISTS `cache_locks` (
@@ -68,9 +68,9 @@ CREATE TABLE IF NOT EXISTS `items` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `items_user_id_index` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table todo_project.items: ~25 rows (approximately)
+-- Dumping data for table todo_project.items: ~27 rows (approximately)
 INSERT INTO `items` (`id`, `user_id`, `title`, `description`, `status`, `created_at`, `updated_at`) VALUES
 	(1, 1, 'suscipit21', 'Array341', 0, '2025-06-12 04:33:49', '2025-06-12 07:03:02'),
 	(2, 1, 'quo2', 'Array2', 0, '2025-06-12 04:33:49', '2025-06-12 07:00:04'),
@@ -81,7 +81,6 @@ INSERT INTO `items` (`id`, `user_id`, `title`, `description`, `status`, `created
 	(11, 1, 'distinctio', 'Array', 1, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
 	(12, 1, 'ratione', 'Array', 0, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
 	(13, 1, 'consectetur', 'Array', 1, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
-	(14, 1, 'pariatur', 'Array', 1, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
 	(15, 1, 'tempora', 'Array', 1, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
 	(16, 1, 'aperiam', 'Array', 1, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
 	(17, 1, 'distinctio', 'Array', 1, '2025-06-12 04:33:49', '2025-06-12 04:33:49'),
@@ -98,7 +97,8 @@ INSERT INTO `items` (`id`, `user_id`, `title`, `description`, `status`, `created
 	(28, 1, 'sdf', 'wer', 1, '2025-06-12 06:51:31', '2025-06-12 06:51:31'),
 	(29, 1, 'sdf', 'wer', 1, '2025-06-12 06:51:38', '2025-06-12 06:51:38'),
 	(30, 1, 'sdf', 'wer', 1, '2025-06-12 06:52:04', '2025-06-12 06:52:04'),
-	(31, 1, 'sdffds', 'werwe', 1, '2025-06-12 06:52:10', '2025-06-12 06:52:10');
+	(31, 1, 'sdffds', 'werwe', 1, '2025-06-12 06:52:10', '2025-06-12 06:52:10'),
+	(32, 1, 'fsd', 'wer', 1, '2025-06-13 00:31:30', '2025-06-13 00:31:30');
 
 -- Dumping structure for table todo_project.jobs
 CREATE TABLE IF NOT EXISTS `jobs` (
@@ -138,16 +138,17 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table todo_project.migrations: ~6 rows (approximately)
+-- Dumping data for table todo_project.migrations: ~7 rows (approximately)
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(1, '0001_01_01_000000_create_users_table', 1),
 	(2, '0001_01_01_000001_create_cache_table', 1),
 	(3, '0001_01_01_000002_create_jobs_table', 1),
 	(4, '2025_06_12_062409_add_two_factor_columns_to_users_table', 1),
 	(5, '2025_06_12_062448_create_personal_access_tokens_table', 1),
-	(7, '2025_06_12_065131_create_items_table', 2);
+	(7, '2025_06_12_065131_create_items_table', 2),
+	(8, '2025_06_13_061322_create_posts_table', 3);
 
 -- Dumping structure for table todo_project.password_reset_tokens
 CREATE TABLE IF NOT EXISTS `password_reset_tokens` (
@@ -178,6 +179,23 @@ CREATE TABLE IF NOT EXISTS `personal_access_tokens` (
 
 -- Dumping data for table todo_project.personal_access_tokens: ~0 rows (approximately)
 
+-- Dumping structure for table todo_project.posts
+CREATE TABLE IF NOT EXISTS `posts` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `body` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table todo_project.posts: ~3 rows (approximately)
+INSERT INTO `posts` (`id`, `title`, `image`, `body`, `created_at`, `updated_at`) VALUES
+	(1, 'Sed voluptas et beat', 'uploads/images/1749805078_Acer Iconia Tab 10_4.jpg', 'At et voluptatum vol', '2025-06-13 01:44:38', '2025-06-13 03:27:58'),
+	(3, 'Ullam neque illum t', 'uploads/images/1749806075_Acer Predator Triton-2.jpg', 'Labore error vitae e', '2025-06-13 03:44:35', '2025-06-13 03:44:35'),
+	(4, 'Tablet', 'uploads/images/1749806094_Acer Iconia Tab 10_2.jpg', 'Tablet Body', '2025-06-13 03:44:54', '2025-06-13 03:45:06');
+
 -- Dumping structure for table todo_project.sessions
 CREATE TABLE IF NOT EXISTS `sessions` (
   `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -193,7 +211,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 
 -- Dumping data for table todo_project.sessions: ~1 rows (approximately)
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-	('4Dl6pxf1HWWd5MuZoiVMLLrgZM3001sP4K39qgOI', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVHVpWERTNFRUNjVYWFRhQ0pPRVZDdzExbGJMUldrY0lVcUlxTDZPMCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9pdGVtcyI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTIkM0JHNmhOWWxuc3JUUXpqVXhFMnl3LnVKakY1aklIbVBlUmJMS2RJRUxRRC92bzVDUUc5T3EiO30=', 1749731837);
+	('FPvLDAId0EyX70MlNbJ82TtEdc0qjMoqEdO2fMyF', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiR0pqdHJ1NVhrVGNadkdkbzNFVjI1RTB4cmk4QUhKbm9WOEFJbzhKWCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wb3N0LzEvZWRpdCI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTIkM0JHNmhOWWxuc3JUUXpqVXhFMnl3LnVKakY1aklIbVBlUmJMS2RJRUxRRC92bzVDUUc5T3EiO30=', 1749806929);
 
 -- Dumping structure for table todo_project.users
 CREATE TABLE IF NOT EXISTS `users` (
@@ -216,7 +234,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 -- Dumping data for table todo_project.users: ~1 rows (approximately)
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
-	(1, 'Ayesh', 'sdachathuranga@gmail.com', NULL, '$2y$12$3BG6hNYlnsrTQzjUxE2yw.uJjF5jIHmPeRbLKdIELQD/vo5CQG9Oq', NULL, NULL, NULL, 'rgj9Js9n5Jw189B5HpGEJG5CF6tv0GQat5f1fqQH5S3NRBfP806qXwtvb9WG', NULL, NULL, '2025-06-12 00:59:23', '2025-06-12 00:59:23');
+	(1, 'Ayesh', 'sdachathuranga@gmail.com', NULL, '$2y$12$3BG6hNYlnsrTQzjUxE2yw.uJjF5jIHmPeRbLKdIELQD/vo5CQG9Oq', NULL, NULL, NULL, 'jYHSogVLE1VpANq6crIdZ9cDockQ48VlYdDuUFyzdYIYgQKSUgAyBHTGKabE', NULL, NULL, '2025-06-12 00:59:23', '2025-06-12 00:59:23');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

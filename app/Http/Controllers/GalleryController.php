@@ -16,6 +16,14 @@ class GalleryController extends Controller
         }, $files);
 
         return view('livewire.gallery', compact('images'));
+
+//         if ($request->hasFile('cover_photo')) {
+//             $file = $request->file('cover_photo');
+//             $fileName = time() . '_' . $file->getClientOriginalName();
+//             $destinationPath = public_path('files/cover_photo'); // Save in public folder
+//             $file->move($destinationPath, $fileName);
+//             $coverPhotoPath = 'files/cover_photo/' . $fileName; // Store relative path
+//         }
     }
 
     public function upload(Request $request)

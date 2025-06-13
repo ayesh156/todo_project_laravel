@@ -1,4 +1,4 @@
-<div class="p-6 lg:p-8 bg-white border-b border-gray-200">
+{{-- <div class="p-6 lg:p-8 bg-white border-b border-gray-200">
     <form id="item-form" action="{{ route('items.store') }}" method="POST" class="mb-6">
         @csrf
         <input type="hidden" name="_method" value="POST" id="form-method">
@@ -131,4 +131,10 @@
 @endif
 </div>
 
+ --}}
 
+ @extends('layouts.app')
+
+@section('content')
+    @include('include.items')
+@endsection
